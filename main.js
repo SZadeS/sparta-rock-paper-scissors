@@ -1,11 +1,11 @@
 var winsByComputer = 0;
 var winsByPlayer = 0;
-var computerWeapon = (Math.random(3));
+var computerWeapon = (Math.random());
 
 while (winsByComputer < 3 && winsByPlayer < 3 ) {{
-  if (computerWeapon ==0) {
+  if (computerWeapon < 0.33) {
   computerWeaponByName = "rock";
-} else if(computerWeapon == 1) {
+} else if(computerWeapon <0.66) {
   computerWeaponByName = "paper";
 } else {
   computerWeaponByName = "scissors";
@@ -18,15 +18,15 @@ alert("The computer chose " + computerWeaponByName);
   var battle = function(choice1, choice2) {
     if (choice1 == choice2) {
     alert("This round is a tie. Computer score is zero. Your score is zero");
-  }else if (choice1 == 1 && choice2==1) {
+  }else if (choice1 == 1 && choice2=="paper") {
       winsByComputer += 1
       alert("Computer Wins. Your score : " + winsByPlayer + " Computer's score: " + winsByComputer);
     }
-    else if (choice1 == 2 && choice2 == 2) {
+    else if (choice1 == 2 && choice2 == "scissors") {
      winsByComputer += 1
      alert("Computer Wins. Your score : " + winsByPlayer + " Computer's score: " + winsByComputer);
     }
-    else if (choice1 == 3 && choice2 == 0) {
+    else if (choice1 == 3 && choice2 == "rock") {
       winsByComputer += 1
       alert("Computer Wins. Your score : " + winsByPlayer + " Computer's score: " + winsByComputer);
      }
@@ -37,4 +37,4 @@ alert("The computer chose " + computerWeaponByName);
   }
 }
 
-battle(inputPrompt, computerWeapon);
+battle(inputPrompt, computerWeaponByName);
