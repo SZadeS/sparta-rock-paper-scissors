@@ -2,14 +2,14 @@ var winsByComputer = 0;
 var winsByPlayer = 0;
 var computerWeapon = (Math.random());
 
-while (winsByComputer < 3 && winsByPlayer < 3 ) {{
+while (winsByComputer < 3 && winsByPlayer < 3 ) {
   if (computerWeapon < 0.33) {
   computerWeaponByName = "rock";
 } else if(computerWeapon <0.66) {
   computerWeaponByName = "paper";
 } else {
   computerWeaponByName = "scissors";
-}}
+}
 var inputPrompt = prompt('Hit 1 for rock, 2 for paper and 3 for scissors');
 
 alert("The computer chose " + computerWeaponByName);
@@ -35,6 +35,5 @@ alert("The computer chose " + computerWeaponByName);
       alert("You win. Your score : " + winsByPlayer + " Computer's score: " + winsByComputer);
     }
   }
-}
-
 battle(inputPrompt, computerWeaponByName);
+}
