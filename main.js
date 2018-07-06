@@ -1,8 +1,9 @@
 var winsByComputer = 0;
 var winsByPlayer = 0;
-var computerWeapon = (Math.random());
+
 
 while (winsByComputer < 3 && winsByPlayer < 3 ) {
+  var computerWeapon = (Math.random());
   if (computerWeapon < 0.33) {
   computerWeaponByName = "rock";
 } else if(computerWeapon <0.66) {
